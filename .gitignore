@@ -1,0 +1,7 @@
+#Packaging artifacts
+scripts/package_prj
+xgui/*_wrp_*.tcl
+
+#Pycharm Files
+**/.idea/**/*
+*.pyc
