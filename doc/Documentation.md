@@ -39,6 +39,8 @@ The figure below shows the configuration GUI:
 ![ipi-gui](./pics/ipi-gui.png)
 
 The parameters are briefly described here:
+* **Address Width of the s00_axi interface**
+  * The address width must be set to at least **_ceil(log2(MaxRegisters x 4 + 32))_** 
 * **Clock frequency in Hz**
   * The clock frequency is required to calculate the timeout (see below)
 * **Timeout in us**

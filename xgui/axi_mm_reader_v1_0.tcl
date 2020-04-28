@@ -3,6 +3,7 @@ proc init_gui { IPINST } {
   ipgui::add_param $IPINST -name "Component_Name"
   #Adding Page
   set Configuration [ipgui::add_page $IPINST -name "Configuration"]
+  ipgui::add_param $IPINST -name "AxiSlaveAddrWidth_g" -parent ${Configuration}
   ipgui::add_param $IPINST -name "ClkFrequencyHz" -parent ${Configuration}
   ipgui::add_param $IPINST -name "TimeoutUs_g" -parent ${Configuration}
   ipgui::add_param $IPINST -name "MaxRegCount_g" -parent ${Configuration}

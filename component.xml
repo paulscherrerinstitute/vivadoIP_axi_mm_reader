@@ -465,22 +465,6 @@
       </spirit:portMaps>
     </spirit:busInterface>
     <spirit:busInterface>
-      <spirit:name>Rst</spirit:name>
-      <spirit:busType spirit:vendor="xilinx.com" spirit:library="signal" spirit:name="reset" spirit:version="1.0"/>
-      <spirit:abstractionType spirit:vendor="xilinx.com" spirit:library="signal" spirit:name="reset_rtl" spirit:version="1.0"/>
-      <spirit:slave/>
-      <spirit:portMaps>
-        <spirit:portMap>
-          <spirit:logicalPort>
-            <spirit:name>RST</spirit:name>
-          </spirit:logicalPort>
-          <spirit:physicalPort>
-            <spirit:name>Rst</spirit:name>
-          </spirit:physicalPort>
-        </spirit:portMap>
-      </spirit:portMaps>
-    </spirit:busInterface>
-    <spirit:busInterface>
       <spirit:name>Clk</spirit:name>
       <spirit:busType spirit:vendor="xilinx.com" spirit:library="signal" spirit:name="clock" spirit:version="1.0"/>
       <spirit:abstractionType spirit:vendor="xilinx.com" spirit:library="signal" spirit:name="clock_rtl" spirit:version="1.0"/>
@@ -570,7 +554,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>e334884b</spirit:value>
+            <spirit:value>f15eb9dd</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -584,7 +568,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>95ab2a4e</spirit:value>
+            <spirit:value>a836d0ae</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -598,7 +582,21 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>3667f798</spirit:value>
+            <spirit:value>4f82ba90</spirit:value>
+          </spirit:parameter>
+        </spirit:parameters>
+      </spirit:view>
+      <spirit:view>
+        <spirit:name>xilinx_softwaredriver</spirit:name>
+        <spirit:displayName>Software Driver</spirit:displayName>
+        <spirit:envIdentifier>:vivado.xilinx.com:sw.driver</spirit:envIdentifier>
+        <spirit:fileSetRef>
+          <spirit:localName>xilinx_softwaredriver_view_fileset</spirit:localName>
+        </spirit:fileSetRef>
+        <spirit:parameters>
+          <spirit:parameter>
+            <spirit:name>viewChecksum</spirit:name>
+            <spirit:value>ae980dc8</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1768,7 +1766,7 @@
       <spirit:file>
         <spirit:name>xgui/axi_mm_reader_v1_0.tcl</spirit:name>
         <spirit:fileType>tclSource</spirit:fileType>
-        <spirit:userFileType>CHECKSUM_e334884b</spirit:userFileType>
+        <spirit:userFileType>CHECKSUM_f15eb9dd</spirit:userFileType>
         <spirit:userFileType>XGUI_VERSION_2</spirit:userFileType>
       </spirit:file>
     </spirit:fileSet>
@@ -1784,6 +1782,29 @@
       <spirit:file>
         <spirit:name>doc/index.html</spirit:name>
         <spirit:userFileType>pdf</spirit:userFileType>
+      </spirit:file>
+    </spirit:fileSet>
+    <spirit:fileSet>
+      <spirit:name>xilinx_softwaredriver_view_fileset</spirit:name>
+      <spirit:file>
+        <spirit:name>drivers/axi_mm_reader/data/axi_mm_reader.mdd</spirit:name>
+        <spirit:userFileType>mdd</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>drivers/axi_mm_reader/data/axi_mm_reader.tcl</spirit:name>
+        <spirit:fileType>tclSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>drivers/axi_mm_reader/src/Makefile</spirit:name>
+        <spirit:fileType>unknown</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>drivers/axi_mm_reader/src/axi_mm_reader.c</spirit:name>
+        <spirit:fileType>cSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>drivers/axi_mm_reader/src/axi_mm_reader.h</spirit:name>
+        <spirit:fileType>cSource</spirit:fileType>
       </spirit:file>
     </spirit:fileSet>
   </spirit:fileSets>
@@ -1816,8 +1837,8 @@
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>AxiSlaveAddrWidth_g</spirit:name>
-      <spirit:displayName>Axislaveaddrwidth G</spirit:displayName>
-      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.AxiSlaveAddrWidth_g" spirit:minimum="0" spirit:rangeType="long">14</spirit:value>
+      <spirit:displayName>Address with of the s00_axi interface</spirit:displayName>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.AxiSlaveAddrWidth_g" spirit:minimum="8" spirit:maximum="24" spirit:rangeType="long">14</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>C_S00_AXI_ID_WIDTH</spirit:name>
@@ -1860,33 +1881,33 @@
       <xilinx:definitionSource>package_project</xilinx:definitionSource>
       <xilinx:vendorDisplayName>Oliver BrÃ¼ndler</xilinx:vendorDisplayName>
       <xilinx:vendorURL>https://none.com</xilinx:vendorURL>
-      <xilinx:coreRevision>1587968031</xilinx:coreRevision>
-      <xilinx:coreCreationDateTime>2020-04-27T06:14:32Z</xilinx:coreCreationDateTime>
+      <xilinx:coreRevision>1588055969</xilinx:coreRevision>
+      <xilinx:coreCreationDateTime>2020-04-28T06:40:04Z</xilinx:coreCreationDateTime>
       <xilinx:tags>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@5b52318f_ARCHIVE_LOCATION">c:/work/psi_fpga_all/VivadoIp/vivadoIP_axi_mm_reader</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@2be87419_ARCHIVE_LOCATION">c:/work/psi_fpga_all/VivadoIp/vivadoIP_axi_mm_reader</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@6016c65c_ARCHIVE_LOCATION">c:/work/psi_fpga_all/VivadoIp/vivadoIP_axi_mm_reader</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@374ae271_ARCHIVE_LOCATION">c:/work/psi_fpga_all/VivadoIp/vivadoIP_axi_mm_reader</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@3f3d3b2f_ARCHIVE_LOCATION">c:/work/psi_fpga_all/VivadoIp/vivadoIP_axi_mm_reader</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@b0060ee_ARCHIVE_LOCATION">c:/work/psi_fpga_all/VivadoIp/vivadoIP_axi_mm_reader</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@2cb3a124_ARCHIVE_LOCATION">c:/work/psi_fpga_all/VivadoIp/vivadoIP_axi_mm_reader</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@32259399_ARCHIVE_LOCATION">c:/work/psi_fpga_all/VivadoIp/vivadoIP_axi_mm_reader</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@2c158044_ARCHIVE_LOCATION">c:/work/psi_fpga_all/VivadoIp/vivadoIP_axi_mm_reader</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@7407a1b1_ARCHIVE_LOCATION">c:/work/psi_fpga_all/VivadoIp/vivadoIP_axi_mm_reader</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@50004e76_ARCHIVE_LOCATION">c:/work/psi_fpga_all/VivadoIp/vivadoIP_axi_mm_reader</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@356fb872_ARCHIVE_LOCATION">c:/work/psi_fpga_all/VivadoIp/vivadoIP_axi_mm_reader</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@2440f6c7_ARCHIVE_LOCATION">c:/work/psi_fpga_all/VivadoIp/vivadoIP_axi_mm_reader</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@13e81a00_ARCHIVE_LOCATION">c:/work/psi_fpga_all/VivadoIp/vivadoIP_axi_mm_reader_github</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3759d79a_ARCHIVE_LOCATION">c:/work/psi_fpga_all/VivadoIp/vivadoIP_axi_mm_reader_github</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6a5b04c3_ARCHIVE_LOCATION">c:/work/psi_fpga_all/VivadoIp/vivadoIP_axi_mm_reader_github</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@32b91a37_ARCHIVE_LOCATION">c:/work/psi_fpga_all/VivadoIp/vivadoIP_axi_mm_reader_github</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2aa668b2_ARCHIVE_LOCATION">c:/work/psi_fpga_all/VivadoIp/vivadoIP_axi_mm_reader_github</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5b684692_ARCHIVE_LOCATION">c:/work/psi_fpga_all/VivadoIp/vivadoIP_axi_mm_reader_github</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@73df41db_ARCHIVE_LOCATION">c:/work/psi_fpga_all/VivadoIp/vivadoIP_axi_mm_reader_github</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@67050225_ARCHIVE_LOCATION">c:/work/psi_fpga_all/VivadoIp/vivadoIP_axi_mm_reader_github</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@de2376_ARCHIVE_LOCATION">c:/work/psi_fpga_all/VivadoIp/vivadoIP_axi_mm_reader_github</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@44f81f05_ARCHIVE_LOCATION">c:/work/psi_fpga_all/VivadoIp/vivadoIP_axi_mm_reader_github</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4a8cfe69_ARCHIVE_LOCATION">c:/work/psi_fpga_all/VivadoIp/vivadoIP_axi_mm_reader_github</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@20dbb7d3_ARCHIVE_LOCATION">c:/work/psi_fpga_all/VivadoIp/vivadoIP_axi_mm_reader_github</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2410d1c3_ARCHIVE_LOCATION">c:/work/psi_fpga_all/VivadoIp/vivadoIP_axi_mm_reader_github</xilinx:tag>
       </xilinx:tags>
     </xilinx:coreExtensions>
     <xilinx:packagingInfo>
       <xilinx:xilinxVersion>2019.1</xilinx:xilinxVersion>
-      <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="945a9ebc"/>
+      <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="85be90ea"/>
       <xilinx:checksum xilinx:scope="addressSpaces" xilinx:value="95a97533"/>
       <xilinx:checksum xilinx:scope="memoryMaps" xilinx:value="e37bc863"/>
-      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="f8aaf10b"/>
+      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="d4d69887"/>
       <xilinx:checksum xilinx:scope="ports" xilinx:value="184f49a2"/>
       <xilinx:checksum xilinx:scope="hdlParameters" xilinx:value="1848cedb"/>
-      <xilinx:checksum xilinx:scope="parameters" xilinx:value="99957c43"/>
+      <xilinx:checksum xilinx:scope="parameters" xilinx:value="8c30f5c0"/>
     </xilinx:packagingInfo>
   </spirit:vendorExtensions>
 </spirit:component>

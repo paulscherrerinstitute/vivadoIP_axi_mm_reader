@@ -58,10 +58,10 @@ add_lib_relative \
 # Driver Files
 ###############################################################	
 
-#add_drivers_relative ../drivers/spi_simple { \
-#	src/spi_simple.c \
-#	src/spi_simple.h \
-#}
+add_drivers_relative ../drivers/axi_mm_reader { \
+	src/axi_mm_reader.c \
+	src/axi_mm_reader.h \
+}
 	
 
 ###############################################################
@@ -70,6 +70,10 @@ add_lib_relative \
 
 #User Parameters
 gui_add_page "Configuration"
+
+gui_create_parameter "AxiSlaveAddrWidth_g" "Address with of the s00_axi interface"
+gui_parameter_set_range 8 24
+gui_add_parameter
 
 gui_create_parameter "ClkFrequencyHz" "Clock frequency in Hz"
 gui_add_parameter
