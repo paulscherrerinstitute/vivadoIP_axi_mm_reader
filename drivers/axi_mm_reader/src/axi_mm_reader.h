@@ -83,7 +83,7 @@ MmReader_ErrCode MmReader_SetRegTable(const uint32_t baseAddr, const uint32_t* c
  * @param level_p		Level of the buffer (in 32-bit values = registers)
  * @return				Return Code (zero on success)
  */
-SpiSimple_ErrCode MmReader_GetLevel(const uint32_t baseAddr, uint32_t* const level_p);
+MmReader_ErrCode MmReader_GetLevel(const uint32_t baseAddr, uint32_t* const level_p);
 
 /**
  * Read one FIFO entry.
@@ -96,7 +96,7 @@ SpiSimple_ErrCode MmReader_GetLevel(const uint32_t baseAddr, uint32_t* const lev
  * @param last_p		True if this value is the last one of a read cycle
  * @return				Return Code (zero on success)
  */
-SpiSimple_ErrCode MmReader_ReadFifoEntry(const uint32_t baseAddr, uint32_t* const data_p, bool* const last_p);
+MmReader_ErrCode MmReader_ReadFifoEntry(const uint32_t baseAddr, uint32_t* const data_p, bool* const last_p);
 
 /**
  * Read one complete data packet (all registers of a read cycle, until a LAST flag) from the internal FIFO.
@@ -110,7 +110,7 @@ SpiSimple_ErrCode MmReader_ReadFifoEntry(const uint32_t baseAddr, uint32_t* cons
  * @param pktSize_p		Number of registers (32-bit words) actually read
  * @return				Return Code (zero on success)
  */
-SpiSimple_ErrCode MmReader_ReadFifoPacket(const uint32_t baseAddr, uint32_t* const buffer_p, const uint32_t size, uint32_t* const pktSize_p);
+MmReader_ErrCode MmReader_ReadFifoPacket(const uint32_t baseAddr, uint32_t* const buffer_p, const uint32_t size, uint32_t* const pktSize_p);
 
 
 

@@ -46,12 +46,12 @@ MmReader_ErrCode MmReader_SetRegTable(const uint32_t baseAddr, const uint32_t* c
 		return ret;
 	}
 	if (true == enaState) {
-		return MmReader_IpMustBeDisabled
+		return MmReader_IpMustBeDisabled;
 	}
 	
 	//Set all registers
 	for (idx = 0; idx < numRegs; idx++){
-		Xil_Out32(baseAddr + MM_READER_REGMAP_OFFS + 4*i, regs_p[idx]);
+		Xil_Out32(baseAddr + MM_READER_REGMAP_OFFS + 4*idx, regs_p[idx]);
 	}
 	//Set number of registers
 	Xil_Out32(baseAddr + MM_READER_REG_CNT_REG, numRegs);
@@ -59,14 +59,14 @@ MmReader_ErrCode MmReader_SetRegTable(const uint32_t baseAddr, const uint32_t* c
 	return MmReader_Success;
 }
 
-SpiSimple_ErrCode MmReader_GetLevel(const uint32_t baseAddr, uint32_t* const level_p) {
+MmReader_ErrCode MmReader_GetLevel(const uint32_t baseAddr, uint32_t* const level_p) {
 	//Read register
 	*level_p = Xil_In32(baseAddr + MM_READER_LEVEL_REG);
 	
 	return MmReader_Success;
 }
 
-SpiSimple_ErrCode MmReader_ReadFifoEntry(const uint32_t baseAddr, uint32_t* const data_p, bool* const last_p) {
+MmReader_ErrCode MmReader_ReadFifoEntry(const uint32_t baseAddr, uint32_t* const data_p, bool* const last_p) {
 	//variable definitions
 	MmReader_ErrCode ret;
 	uint32_t level;
@@ -86,10 +86,10 @@ SpiSimple_ErrCode MmReader_ReadFifoEntry(const uint32_t baseAddr, uint32_t* cons
 	*last_p = (bool)reg;
 	*data_p = Xil_In32(baseAddr + MM_READER_RD_DATA_REG);
 	
-	return SpiSimple_Success;
+	return MmReader_Success;
 }
 
-SpiSimple_ErrCode MmReader_ReadFifoPacket(const uint32_t baseAddr, uint32_t* const buffer_p, const uint32_t size, uint32_t* const pktSize_p) {
+MmReader_ErrCode MmReader_ReadFifoPacket(const uint32_t baseAddr, uint32_t* const buffer_p, const uint32_t size, uint32_t* const pktSize_p) {
 	//variable definition
 	MmReader_ErrCode ret;
 	bool last;
@@ -111,6 +111,6 @@ SpiSimple_ErrCode MmReader_ReadFifoPacket(const uint32_t baseAddr, uint32_t* con
 		return MmReader_NoCompletePacketInFifo;
 	}
 	
-	return SpiSimple_Success;
+	return MmReader_Success;
 }
 
