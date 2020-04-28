@@ -9,6 +9,10 @@
 */_*/**/*
 */@_opt/**/*
 
+#Ignore FHDL files
+*.cf
+*.ghw
+
 #Ignore transcripts
 *.transcript
 transcript
