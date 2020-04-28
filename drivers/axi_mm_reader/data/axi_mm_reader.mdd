@@ -1,0 +1,10 @@
+
+
+OPTION psf_version = 2.1;
+
+BEGIN DRIVER axi_mm_reader
+	OPTION supported_peripherals = (axi_mm_reader);
+	OPTION copyfiles = all;
+	OPTION VERSION = 1.0;
+	OPTION NAME = axi_mm_reader;
+END DRIVER
