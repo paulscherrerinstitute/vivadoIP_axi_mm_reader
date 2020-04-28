@@ -72,6 +72,9 @@ The parameters are briefly described here:
 | 0x08    | RdData | RV   | 31:0 | Register read value FIFO. Reading this register removes the entry read from the FIFO. <br> Only present for *Output type = AXIMM* |
 | 0x0C    | RdLast | R    | 0    | 1 = current value in *RdData* is the last of a read-cycle<br> Only present for *Output type = AXIMM* |
 | 0x10    | Level  | R    | 31:0 | Level of the internal read value buffer FIFO |
+| 0x20    | Addr[0] | RW  | 31:0 | Address of first register to read |
+| 0x24    | Addr[1] | RW  | 31:0 | Address of second register to read |
+| ...     | ...     | ... |....  | ... |
 
 
 When operating in *AXIMM* output mode, the *RdLast* must be read before *RdData* because reading *RdData* removes the entry from the FIFO.
