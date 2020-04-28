@@ -81,4 +81,10 @@ The parameters are briefly described here:
 
 When operating in *AXIMM* output mode, the *RdLast* must be read before *RdData* because reading *RdData* removes the entry from the FIFO.
 
+## Architecture
+
+The figure below shows the overall architecture if the IP-Core.
+
+![architecture](./pics/architecture.png)
+
  
